@@ -51,9 +51,9 @@ class BookResource(Resource):
         if qry is None:
             return {'status': 'NOT_FOUND'}, 404
 
-        qry.title = args['buku']
-        qry.isbn = args['penulis']
-        qry.writer = args['kategori']
+        qry.buku = args['buku']
+        qry.penulis = args['penulis']
+        qry.kategori = args['kategori']
         db.session.commit()
 
         return marshal(qry, Books.response_fields), 200, {'Content-Type' : 'application/json' }

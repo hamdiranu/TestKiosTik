@@ -14,9 +14,9 @@ class Books(db.Model):
 
     response_fields = {
         'id'           : fields.Integer,
-        'buku'         : fields.Integer,
-        'penulis'      : fields.Boolean,
-        'kategori'     : fields.Integer,
+        'buku'         : fields.String,
+        'penulis'      : fields.String,
+        'kategori'     : fields.String,
         'created_at'   : fields.DateTime,
         'updated_at'   : fields.DateTime,
         'deleted'      : fields.Boolean,
